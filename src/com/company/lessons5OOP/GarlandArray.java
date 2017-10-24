@@ -24,12 +24,12 @@ public class GarlandArray {
                 case 4:
                     showArr(arr);
                     break;
+                case 5:
+                    i = true;
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Вы ввели некорректное число или ввели 5 и вышли из программы");
-            }
-            if (param == 5) {
-                i = true;
-                System.exit(0);
             }
         }
     }
@@ -65,11 +65,15 @@ public class GarlandArray {
 
 
     private static void flashing(int arr[]) {
+        int param = selectMethod("Ведите количество миганий гирлянды");
         showArr(arr);
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Math.abs(arr[i] - 1);
+        for (int j = 0; j < param; j++) {
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = Math.abs(arr[i] - 1);
+
+            }
+            showArr(arr);
         }
-        showArr(arr);
     }
 
     private static void ticker(int arr[]) {

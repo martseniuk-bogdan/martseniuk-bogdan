@@ -21,12 +21,12 @@ public class Garland {
                 case 4:
                     show();
                     break;
+                case 5:
+                    i = true;
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Вы ввели некорректное число или ввели 5 и вышли из программы");
-            }
-            if (param == 5) {
-                i = true;
-                System.exit(0);
             }
         }
     }
