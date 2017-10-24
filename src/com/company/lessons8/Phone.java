@@ -7,7 +7,7 @@ public class Phone {
     private static int count = 0;
 
     Phone() {
-        model = "samsung";
+        model = "Samsung";
         phNumber = 123456;
         weight = 11.1;
         count++;

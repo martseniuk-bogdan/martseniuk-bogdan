@@ -17,7 +17,7 @@ public class MainPhone {
         phone2.setModel("iPhone");
         phone2.setPhNumber(4555);
 
-        phone3.setWeight(145.5);
+        phone3.setWeight(155.5);
         phone3.setModel("iPhone");
         phone3.setPhNumber(1000000);
         System.out.println(phone3.toString());

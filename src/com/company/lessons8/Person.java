@@ -41,6 +41,6 @@ public class Person {
     }
 
     public void talk() {
-        System.out.println("Говорит- " + getFullName() + " ему- " + getAge() + " лет.");
+        System.out.println("Говорит- " + getFullName() + " ему- " + getAge() + "  лет.");
     }
 }
