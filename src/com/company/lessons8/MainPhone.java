@@ -38,6 +38,6 @@ public class MainPhone {
         phone1.sendMessage(1233, 333, 33333);
 
         System.out.println("Количество объектов- " + Phone.getCount());
-
+        System.gc();
     }
 }

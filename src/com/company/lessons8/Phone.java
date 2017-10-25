@@ -3,20 +3,20 @@ package com.company.lessons8;
 public class Phone {
     private String model;
     private double weight;
-    private int phNumber;
+    private int number;
     private static int count = 0;
 
-    Phone() {
+    public Phone() {
         model = "Samsung";
-        phNumber = 123456;
+        number = 123456;
         weight = 11.1;
         count++;
     }
 
-    Phone(String m, int ph, double w) {
+    public Phone(String m, int ph, double w) {
         this();
         model = m;
-        phNumber = ph;
+        number = ph;
         weight = w;
     }
 
@@ -26,11 +26,11 @@ public class Phone {
 
     public int getPhNumber() {
 
-        return phNumber;
+        return number;
     }
 
     public void setPhNumber(int phNumber) {
-        this.phNumber = phNumber;
+        this.number = phNumber;
     }
 
     public double getWeight() {
@@ -42,10 +42,11 @@ public class Phone {
     }
 
     public String getModel() {
-        count++;
         return model;
     }
-
+    public int getNumber() {
+        return number;
+    }
     public void setModel(String model) {
         this.model = model;
     }
@@ -55,31 +56,30 @@ public class Phone {
         return "Phone{" +
                 "model='" + model + '\'' +
                 ", weight=" + weight +
-                ", phNumber=" + phNumber +
+                ", phNumber=" + number +
                 '}';
     }
 
     public static void show(Phone obj) {
         System.out.println("model " + obj.model);
-        System.out.println("number " + obj.phNumber);
+        System.out.println("number " + obj.number);
         System.out.println("weight " + obj.weight);
     }
 
-    void receiveCall(String name) {
+    public void receiveCall(String name) {
         System.out.println("Call " + name);
     }
 
-    void receiveCall(String name, int phNumber) {
+    public void receiveCall(String name, int phNumber) {
         System.out.println("Name- " + name + " Number- " + phNumber);
     }
 
-    int getNumber() {
-        return phNumber;
-    }
-
-    void sendMessage(int... phNumber) {
+    public void sendMessage(int... phNumber) {
         for (int a : phNumber) {
             System.out.println("send to " + a);
         }
+    }
+    protected void finalize() {
+        System.out.println("Goodbye phone");
     }
 }
