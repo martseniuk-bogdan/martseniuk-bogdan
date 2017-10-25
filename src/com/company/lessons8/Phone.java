@@ -20,17 +20,12 @@ public class Phone {
         weight = w;
     }
 
-    public static int getCount() {
-        return count;
+    public String getModel() {
+        return model;
     }
 
-    public int getPhNumber() {
-
-        return number;
-    }
-
-    public void setPhNumber(int phNumber) {
-        this.number = phNumber;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public double getWeight() {
@@ -41,14 +36,16 @@ public class Phone {
         this.weight = weight;
     }
 
-    public String getModel() {
-        return model;
-    }
     public int getNumber() {
         return number;
     }
-    public void setModel(String model) {
-        this.model = model;
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     @Override
@@ -81,5 +78,6 @@ public class Phone {
     }
     protected void finalize() {
         System.out.println("Goodbye phone");
+        System.out.println(Phone.getCount());
     }
 }

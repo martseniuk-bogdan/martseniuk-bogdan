@@ -9,17 +9,17 @@ public class MainPhone {
 
         phone1.setWeight(11.4);
         phone1.setModel("iPhone");
-        phone1.setPhNumber(123456);
+        phone1.setNumber(123456);
         Phone.show(phone1);
 
         System.out.println(phone2.toString());
         phone2.setWeight(145.5);
         phone2.setModel("iPhone");
-        phone2.setPhNumber(4555);
+        phone2.setNumber(4555);
 
         phone3.setWeight(155.5);
         phone3.setModel("iPhone");
-        phone3.setPhNumber(1000000);
+        phone3.setNumber(1000000);
         System.out.println(phone3.toString());
 
         phone1.receiveCall("jobs");
@@ -37,7 +37,6 @@ public class MainPhone {
         phone1.receiveCall("bogdan", 123321);
         phone1.sendMessage(1233, 333, 33333);
 
-        System.out.println("Количество объектов- " + Phone.getCount());
         System.gc();
     }
 }
