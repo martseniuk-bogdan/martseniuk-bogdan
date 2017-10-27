@@ -53,7 +53,7 @@ public class Phone {
         return "Phone{" +
                 "model='" + model + '\'' +
                 ", weight=" + weight +
-                ", phNumber=" + number +
+                ", number=" + number +
                 '}';
     }
 
@@ -78,6 +78,6 @@ public class Phone {
     }
     protected void finalize() {
         System.out.println("Goodbye phone");
-        System.out.println(Phone.getCount());
+        count--;
     }
 }

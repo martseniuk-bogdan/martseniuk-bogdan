@@ -14,5 +14,8 @@ public class ShapeAbsMain {
         for (Shape sh1 : sh) {
             sh1.draw();
         }
+        Circle c1=new Circle(10,10,10,"red");
+        Circle c2=new Circle(10,10,10,"red");
+        System.out.println(c1.equals(c2));
     }
 }

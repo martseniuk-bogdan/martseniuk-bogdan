@@ -40,6 +40,26 @@ public class Circle extends Shape {
         this.rad = rad;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Circle circle = (Circle) o;
+
+        if (x != circle.x) return false;
+        if (y != circle.y) return false;
+        return rad == circle.rad;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x;
+        result = 31 * result + y;
+        result = 31 * result + rad;
+        return result;
+    }
+
     public void draw() {
         System.out.println("Координаты центра круга- " + getX() + "." + getY() + " С радиусом- " + getRad() + " И цветом- " + getColor());
     }
