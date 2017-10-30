@@ -20,11 +20,13 @@ public class MainMatrix {
         Matrix secondMatr = new Matrix(3, 3, new double[][]{{1, 1, 1}, {2, 2, 2}, {3, 3, 3}});
         secondMatr.print("second Arr");
 
+        Matrix matrixThird = new Matrix(4, 4, new double[][]{{2, 2, 2, 2}, {4, 4, 4, 4}, {5, 5, 5, 5}, {6, 6, 6, 6}});
+
         result = firstMatr.summa(secondMatr);
         result.print("first Arr+second Arr=");
 
-        result = firstMatr.multiplyByTheNumber(10.0);
-        result.print("first Arr * 10.0");
+        result = matrixThird.multiplyByTheNumber(10.0);
+        result.print("3 Arr * 10.0");
 
         result = firstMatr.multiplicationOfTwoMatrices(secondMatr);
         result.print("first Arr * second Arr");

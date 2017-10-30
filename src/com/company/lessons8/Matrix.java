@@ -11,54 +11,54 @@ package com.company.lessons8;
  * 3) вывод на печать.
  */
 public class Matrix {
-    private double arr[][];
-    private int i;
-    private int j;
+    private double array[][];
+    private int rows;
+    private int columns;
 
     public Matrix() {
-        i = 3;
-        j = 3;
-        arr = new double[i][j];
+        rows = 3;
+        columns = 3;
+        array = new double[rows][columns];
     }
 
-    public Matrix(int i, int j, double arr[][]) {
-        this.i = i;
-        this.j = j;
-        this.arr = arr;
+    public Matrix(int rows, int columns, double array[][]) {
+        this.rows = rows;
+        this.columns = columns;
+        this.array = array;
     }
 
-    public Matrix(int i, int j) {
-        this.i = i;
-        this.j = j;
-        this.arr = new double[i][j];
+    public Matrix(int rows, int columns) {
+        this.rows = rows;
+        this.columns = columns;
+        this.array = new double[rows][columns];
     }
 
-    Matrix summa(Matrix secondArr) {
+    public Matrix summa(Matrix secondArr) {
         Matrix result = new Matrix(3, 3);
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < 3; j++) {
-                result.arr[i][j] = this.arr[i][j] + secondArr.arr[i][j];
+        for (rows = 0; rows < 3; rows++) {
+            for (columns = 0; columns < 3; columns++) {
+                result.array[rows][columns] = this.array[rows][columns] + secondArr.array[rows][columns];
             }
         }
         return result;
     }
 
-    Matrix multiplyByTheNumber(double value) {
-        Matrix result = new Matrix(3, 3);
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < 3; j++) {
-                result.arr[i][j] = this.arr[i][j] * value;
+    public Matrix multiplyByTheNumber(double value) {
+        Matrix result = new Matrix(4, 4);
+        for (rows = 0; rows < 4; rows++) {
+            for (columns = 0; columns < 4; columns++) {
+                result.array[rows][columns] = this.array[rows][columns] * value;
             }
         }
         return result;
     }
 
-    Matrix multiplicationOfTwoMatrices(Matrix secondArr) {
+    public Matrix multiplicationOfTwoMatrices(Matrix secondArr) {
         Matrix result = new Matrix(3, 3);
-        for (int i = 0; i < 3; i++) {
+        for (int rows = 0; rows < 3; rows++) {
             for (int j = 0; j < 3; j++) {
                 for (int r = 0; r < 3; r++) {
-                    result.arr[i][j] += this.arr[i][r] * secondArr.arr[r][j];
+                    result.array[rows][j] += this.array[rows][r] * secondArr.array[r][j];
                 }
             }
         }
@@ -67,11 +67,11 @@ public class Matrix {
 
     public void print(String a) {
         System.out.println(a);
-        int countI = arr.length;
-        int countJ = arr[0].length;
+        int countI = array.length;
+        int countJ = array[0].length;
         for (int i = 0; i < countI; i++) {
             for (int j = 0; j < countJ; j++) {
-                System.out.print(arr[i][j] + " ");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
