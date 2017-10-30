@@ -1,10 +1,10 @@
 package com.company.lessons11.taskInstrument;
 
 public class Baraban implements Instrument {
-    public double size;
+    private double size;
 
     public Baraban() {
-        size=21;
+        size = 21;
     }
 
     public Baraban(double size) {
@@ -21,6 +21,13 @@ public class Baraban implements Instrument {
 
     @Override
     public void play() {
-        System.out.println("this is baraban, and it size is-"+getSize());
+        System.out.println("this is baraban, and it size is-" + getSize());
+    }
+
+    @Override
+    public String toString() {
+        return "Baraban{" +
+                "size=" + size +
+                '}';
     }
 }

@@ -1,11 +1,11 @@
 package com.company.lessons10.flowers;
 
 public class Tulips extends Flower {
-    public static int count=0;
+    public static int count = 0;
     private int cost;
 
     public Tulips() {
-        cost=20;
+        cost = 20;
         count++;
     }
 
@@ -23,9 +23,15 @@ public class Tulips extends Flower {
         this.cost = cost;
     }
 
-        @Override
+    @Override
     public int costFlowers() {
         return cost;
     }
 
+    @Override
+    public String toString() {
+        return "Tulips{" +
+                "cost=" + cost +
+                '}';
+    }
 }

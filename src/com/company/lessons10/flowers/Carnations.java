@@ -5,7 +5,7 @@ public class Carnations extends Flower {
     private int cost;
 
     public Carnations() {
-        cost=15;
+        cost = 15;
         count++;
     }
 
@@ -26,5 +26,12 @@ public class Carnations extends Flower {
     @Override
     public int costFlowers() {
         return cost;
+    }
+
+    @Override
+    public String toString() {
+        return "Carnations{" +
+                "cost=" + cost +
+                '}';
     }
 }

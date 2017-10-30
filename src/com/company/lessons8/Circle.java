@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Создать несколько объектов данного класса.
  */
 public class Circle {
-    private static double pi = 3.1415;
+    private static double PI = 3.1415;
     private double radius;
 
     public Circle() {
@@ -21,12 +21,12 @@ public class Circle {
         this.radius = radius;
     }
 
-    public static double getPi() {
-        return pi;
+    public static double getPI() {
+        return PI;
     }
 
-    public static void setPi(double pi) {
-        Circle.pi = pi;
+    public static void setPI(double PI) {
+        Circle.PI = PI;
     }
 
     public double getRadius() {
@@ -37,20 +37,18 @@ public class Circle {
         this.radius = radius;
     }
 
-    public void areaC() {
-        double area = getPi() * Math.pow(getRadius(), 2);
-        System.out.println("Площадь= " + area);
+    public double area() {
+        return getPI() * Math.pow(getRadius(), 2);
     }
 
-    public void longCircle() {
-        double longCircle = 2 * getRadius() * getPi();
-        System.out.println("Длина= " + longCircle);
+    public double length() {
+        return 2 * getRadius() * getPI();
     }
 
     public static void main(String[] args) {
         Circle cr = new Circle(10.0);
         Circle cr2 = new Circle();
-        cr.areaC();
-        cr2.longCircle();
+        System.out.println("Area= " + cr.area());
+        System.out.println("Length" + cr2.length());
     }
 }

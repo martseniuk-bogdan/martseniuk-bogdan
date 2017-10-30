@@ -8,11 +8,11 @@ package com.company.lessons10.flowers;
  * В букет может входить несколько цветов разного типа. Также подсчитать количество проданных цветов (используем статический метод).
  */
 public class Roses extends Flower {
-    public static int count=0;
+    public static int count = 0;
     private int cost;
 
     public Roses() {
-        cost =50;
+        cost = 50;
         count++;
     }
 
@@ -33,5 +33,12 @@ public class Roses extends Flower {
     @Override
     public int costFlowers() {
         return cost;
+    }
+
+    @Override
+    public String toString() {
+        return "Roses{" +
+                "cost=" + cost +
+                '}';
     }
 }

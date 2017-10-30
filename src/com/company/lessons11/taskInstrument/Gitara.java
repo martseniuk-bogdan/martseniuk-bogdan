@@ -1,10 +1,10 @@
 package com.company.lessons11.taskInstrument;
 
-public class Gitara implements Instrument{
-    public int countStrun;
+public class Gitara implements Instrument {
+    private int countStrun;
 
     public Gitara() {
-        countStrun=7;
+        countStrun = 7;
     }
 
     public Gitara(int countStrun) {
@@ -21,7 +21,13 @@ public class Gitara implements Instrument{
 
     @Override
     public void play() {
-        System.out.println("this is gitara, with-"+getCountStrun()+" strun");
+        System.out.println("this is gitara, with-" + getCountStrun() + " strun");
+    }
 
+    @Override
+    public String toString() {
+        return "Gitara{" +
+                "countStrun=" + countStrun +
+                '}';
     }
 }
