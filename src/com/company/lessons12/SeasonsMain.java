@@ -16,6 +16,7 @@ public class SeasonsMain {
         Seasons[] seasons1 = Seasons.values();
         for (Seasons tmp : seasons1) {
             System.out.println(tmp);
+            System.out.println(tmp.getDescription());
         }
         System.out.println("");
     }
