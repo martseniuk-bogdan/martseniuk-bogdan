@@ -7,6 +7,7 @@ public class SportCar extends Car {
     private int speed;
 
     public SportCar() {
+        speed=300;
     }
 
     public SportCar(int speed) {
@@ -34,6 +35,6 @@ public class SportCar extends Car {
     public String toString() {
         return "SportCar{" +
                 "speed=" + speed +
-                '}';
+                "} " + super.toString();
     }
 }

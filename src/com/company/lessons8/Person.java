@@ -11,8 +11,8 @@ public class Person {
     private int age;
 
     public Person() {
-        setFullName("Ivanov ivan");
-        setAge(55);
+        setFullName("Щербинина Елизавета");
+        setAge(19);
     }
 
     public Person(String fullName, int age) {
@@ -42,5 +42,13 @@ public class Person {
 
     public void talk() {
         System.out.println("Говорит- " + getFullName() + " ему- " + getAge() + "  лет.");
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName='" + fullName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

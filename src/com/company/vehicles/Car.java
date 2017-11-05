@@ -17,8 +17,9 @@ public class Car {
 
     public Car() {
         this.engine = new Engine();
-        this.driver=new Driver();
-
+        this.driver = new Driver();
+        marka = "bmw m5";
+        carClass = "S class";
     }
 
     public Car(String marka, String carClass, Engine engine, Driver driver) {
@@ -85,9 +86,24 @@ public class Car {
     public void turnLeft() {
         System.out.println("turnLeft");
     }
-    public void printInfo(){
+
+    public void printInfo() {
         System.out.println(this);
     }
 
+    public static void main(String[] args) {
+        Car car = new Car();
+        System.out.println(car.toString());
+        car.printInfo();
+        car.start();
+        car.turnRight();
+        car.turnLeft();
+        car.stop();
 
+        SportCar sportCar = new SportCar();
+        System.out.println(sportCar.toString());
+
+        Lorry lorry = new Lorry();
+        System.out.println(lorry.toString());
+    }
 }

@@ -7,6 +7,7 @@ public class Lorry extends Car {
     private int carryint;
 
     public Lorry() {
+        carryint=22;
     }
 
     public Lorry(int carryint) {
@@ -34,6 +35,6 @@ public class Lorry extends Car {
     public String toString() {
         return "Lorry{" +
                 "carryint=" + carryint +
-                '}';
+                "} " + super.toString();
     }
 }

@@ -6,6 +6,7 @@ public class Driver extends Person {
     private int expirience;
 
     public Driver() {
+        expirience=7;
     }
 
     public Driver(int expirience) {
@@ -33,6 +34,6 @@ public class Driver extends Person {
     public String toString() {
         return "Driver{" +
                 "expirience=" + expirience +
-                '}';
+                "} " + super.toString();
     }
 }

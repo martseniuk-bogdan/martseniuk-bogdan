@@ -5,6 +5,8 @@ public class Engine {
     private String company;
 
     public Engine() {
+        power=220;
+        company="BMW";
     }
 
     public Engine(int power, String company) {
