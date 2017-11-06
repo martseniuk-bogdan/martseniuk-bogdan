@@ -30,4 +30,20 @@ public class Truba implements Instrument {
                 "diametr=" + diametr +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Truba truba = (Truba) o;
+
+        return Double.compare(truba.diametr, diametr) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        long temp = Double.doubleToLongBits(diametr);
+        return (int) (temp ^ (temp >>> 32));
+    }
 }

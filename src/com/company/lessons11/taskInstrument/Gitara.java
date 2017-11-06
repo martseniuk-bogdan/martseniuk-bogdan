@@ -30,4 +30,19 @@ public class Gitara implements Instrument {
                 "countStrun=" + countStrun +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Gitara gitara = (Gitara) o;
+
+        return countStrun == gitara.countStrun;
+    }
+
+    @Override
+    public int hashCode() {
+        return countStrun;
+    }
 }

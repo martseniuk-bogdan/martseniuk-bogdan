@@ -34,4 +34,19 @@ public class Carnations extends Flower {
                 "cost=" + cost +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Carnations that = (Carnations) o;
+
+        return cost == that.cost;
+    }
+
+    @Override
+    public int hashCode() {
+        return cost;
+    }
 }

@@ -41,4 +41,22 @@ public class Roses extends Flower {
                 "cost=" + cost +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Roses roses = (Roses) o;
+
+        return cost == roses.cost;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + cost;
+        return result;
+    }
 }

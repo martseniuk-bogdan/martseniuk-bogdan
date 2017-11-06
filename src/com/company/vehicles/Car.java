@@ -93,7 +93,7 @@ public class Car {
 
     public static void main(String[] args) {
         Car car = new Car();
-        System.out.println(car.toString());
+        System.out.println(car);
         car.printInfo();
         car.start();
         car.turnRight();
@@ -101,9 +101,9 @@ public class Car {
         car.stop();
 
         SportCar sportCar = new SportCar();
-        System.out.println(sportCar.toString());
+        System.out.println(sportCar);
 
         Lorry lorry = new Lorry();
-        System.out.println(lorry.toString());
+        System.out.println(lorry);
     }
 }

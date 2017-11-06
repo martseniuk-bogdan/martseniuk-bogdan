@@ -41,9 +41,19 @@ public class Circle extends Shape {
     }
 
     @Override
+    public String toString() {
+        return "Circle{" +
+                "x=" + x +
+                ", y=" + y +
+                ", rad=" + rad +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Circle)) return false;
+        if (!super.equals(o)) return false;
 
         Circle circle = (Circle) o;
 

@@ -30,4 +30,20 @@ public class Baraban implements Instrument {
                 "size=" + size +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Baraban baraban = (Baraban) o;
+
+        return Double.compare(baraban.size, size) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        long temp = Double.doubleToLongBits(size);
+        return (int) (temp ^ (temp >>> 32));
+    }
 }
