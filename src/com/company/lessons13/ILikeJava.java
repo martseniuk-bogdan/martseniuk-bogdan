@@ -24,6 +24,6 @@ public class ILikeJava {
         System.out.println(string.replace("a", "o"));
         System.out.println(string.toUpperCase());
         System.out.println(string.toLowerCase());
-        System.out.println(string.substring(string.indexOf("Java"), string.lastIndexOf("a")+1));
+        System.out.println(string.substring(string.indexOf("Java"), string.lastIndexOf("a") + 1));
     }
 }
