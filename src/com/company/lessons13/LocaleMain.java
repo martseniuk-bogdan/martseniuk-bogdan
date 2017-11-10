@@ -7,9 +7,7 @@ import java.util.ResourceBundle;
 public class LocaleMain {
     public static void main(String[] args) throws UnsupportedEncodingException {
         printInfo("", "");
-
         printInfo("en", "US");
-
     }
 
     private static void printInfo(String language, String country) throws UnsupportedEncodingException {
