@@ -35,6 +35,5 @@ public class ThreeGen<T, V, K> {
         System.out.println(obj.getOb1());
         System.out.println(obj.getOb2());
         System.out.println(obj.getOb3());
-
     }
 }
