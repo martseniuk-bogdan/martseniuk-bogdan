@@ -39,8 +39,8 @@ public class Dog extends Animal {
 
     @Override
     public String toString() {
-        return "Собака{" + super.toString() +
-                "Тренирована?=" + isTrained +
+        return "dog{" + super.toString() +
+                "is trained?=" + isTrained +
                 '}';
     }
 }

@@ -1,6 +1,11 @@
 package com.company.lessons16;
 
-public class ThreeGen<T, V, K> {
+import com.company.lessons10.animal.Animal;
+import com.company.lessons10.animal.Dog;
+
+import java.io.Serializable;
+
+public class ThreeGen<T extends Comparable, V extends Animal&Serializable, K extends Number> {
     T ob1;
     V ob2;
     K ob3;
@@ -30,7 +35,7 @@ public class ThreeGen<T, V, K> {
     }
 
     public static void main(String[] args) {
-        ThreeGen<Double, Integer, String> obj = new ThreeGen<>(33.2, 322, "text");
+        ThreeGen<String, Animal, Integer> obj = new ThreeGen<>("text", new Dog(),22);
         obj.print();
         System.out.println(obj.getOb1());
         System.out.println(obj.getOb2());

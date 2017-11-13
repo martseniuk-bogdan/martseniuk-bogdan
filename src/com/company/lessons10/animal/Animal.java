@@ -1,6 +1,8 @@
 package com.company.lessons10.animal;
 
-public abstract class Animal {
+import java.io.Serializable;
+
+public abstract class Animal implements Serializable {
     private String food;
     private String location;
 
@@ -37,9 +39,9 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "Животное{" +
-                "пища='" + food + '\'' +
-                ", где живет='" + location + '\'' +
+        return "Animal{" +
+                "food='" + food + '\'' +
+                ", location='" + location + '\'' +
                 '}';
     }
 }
