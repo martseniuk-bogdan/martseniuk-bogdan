@@ -2,6 +2,7 @@ package com.company.lessons12;
 
 public class Wrapper {
     public static void main(String[] args) {
+        System.out.println("https://docs.google.com/spreadsheets/d/1ktG9pOeZAmh1BaR5-4lZV1sXcVt0fpBVDwZ1kFb0fwQ/edit#gid=0");
         methodByte();
         methodShort();
         methodInt();
@@ -30,7 +31,6 @@ public class Wrapper {
         print(s1, s2, s3, s4);
         String s = Short.toString(s3);
         System.out.println(s);
-
     }
 
     public static void methodInt() {
