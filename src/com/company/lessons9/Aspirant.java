@@ -21,13 +21,28 @@ public class Aspirant extends Student {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Aspirant aspirant = (Aspirant) o;
+
+        return workSt != null ? workSt.equals(aspirant.workSt) : aspirant.workSt == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return workSt != null ? workSt.hashCode() : 0;
+    }
+
+    @Override
     public String toString() {
         return "Aspirant{" +
                 "workSt='" + workSt + '\'' +
                 '}';
     }
 
-    public void getScholarship() {
-        System.out.println("200");
+    public int getScholarship() {
+        return 200;
     }
 }

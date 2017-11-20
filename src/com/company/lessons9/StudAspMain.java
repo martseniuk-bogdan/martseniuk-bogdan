@@ -21,7 +21,7 @@ public class StudAspMain {
         aspir[0] = new Student();
         aspir[1] = new Aspirant();
         for (Student show : aspir) {
-            show.getScholarship();
+            System.out.println(show.getScholarship());
         }
     }
 }
