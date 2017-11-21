@@ -1,12 +1,12 @@
 package com.company.lessons15.user;
 
 public class UserLocal {
-    private static String login;
-    private static String password;
+    private String login;
+    private String password;
 
-    public UserLocal() {
-        login = "bogdan";
-        password = "555555";
+    public UserLocal(String login, String password) {
+        this.login = login;
+        this.password = password;
     }
 
     @Override
@@ -17,7 +17,7 @@ public class UserLocal {
                 '}';
     }
 
-    public static void createQuery() {
+    public void createQuery() {
         class Query {
             public void printToLog() {
                 System.out.println("login is - " + login + ", password is- " + password);
@@ -28,9 +28,7 @@ public class UserLocal {
     }
 
     public static void main(String[] args) {
-        UserLocal userLocal = new UserLocal();
-        System.out.println(userLocal);
-
-        UserLocal.createQuery();
+        UserLocal userLocal = new UserLocal("login", "12221");
+        userLocal.createQuery();
     }
 }
