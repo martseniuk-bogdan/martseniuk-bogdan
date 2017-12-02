@@ -1,4 +1,4 @@
-package com.company.lessons17;
+/*package com.company.lessons17;
 
 import java.util.Collection;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class TreeMapMain {
     /*
     Позволяет выводить и значения
      */
-    private static void method3(Map<String, Toy> tm) {
+    /*private static void method3(Map<String, Toy> tm) {
         Collection<Toy> values = tm.values();
         for (Toy t : values) {
             System.out.println(t);
@@ -32,7 +32,7 @@ public class TreeMapMain {
     /*
     Позволяет выводить и ключи
      */
-    private static void method2(Map<String, Toy> tm) {
+   /* private static void method2(Map<String, Toy> tm) {
         Set<String> keys = tm.keySet();
         for (String s : keys) {
             System.out.println(s);
@@ -42,7 +42,7 @@ public class TreeMapMain {
     /*
     Позволяет выводить и ключи и значения
      */
-    private static void method1(Map<String, Toy> tm) {
+  /*  private static void method1(Map<String, Toy> tm) {
         Set<Map.Entry<String, Toy>> set = tm.entrySet();
         for (Map.Entry<String, Toy> tmp : set) {
             System.out.println(tmp.getValue());
@@ -50,3 +50,4 @@ public class TreeMapMain {
         }
     }
 }
+*/

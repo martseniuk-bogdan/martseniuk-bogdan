@@ -1,12 +1,12 @@
-package com.company.lessons17;
+/*package com.company.lessons17;
 
 public class Toy {
     private String name;
-    private int ñostt;
+    private int ï¿½ostt;
 
-    public Toy(String name, int ñostt) {
+    public Toy(String name, int ï¿½ostt) {
         this(name);
-        this.ñostt = ñostt;
+        this.ï¿½ostt = ï¿½ostt;
     }
 
     public Toy(String name) {
@@ -25,19 +25,20 @@ public class Toy {
         this.name = name;
     }
 
-    public int getÑostt() {
-        return ñostt;
+    public int getï¿½ostt() {
+        return ï¿½ostt;
     }
 
-    public void setÑostt(int ñostt) {
-        this.ñostt = ñostt;
+    public void setï¿½ostt(int ï¿½ostt) {
+        this.ï¿½ostt = ï¿½ostt;
     }
 
     @Override
     public String toString() {
         return "Toy{" +
                 "name='" + name + '\'' +
-                ", ñostt=" + ñostt +
+                ", ï¿½ostt=" + ï¿½ostt +
                 '}';
     }
 }
+*/
