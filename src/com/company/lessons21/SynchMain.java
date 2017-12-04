@@ -21,7 +21,7 @@ public class SynchMain extends Thread {
     }
 
     public static void main(String[] args) {
-        StringBuilder str = new StringBuilder( "A");
+        StringBuilder str = new StringBuilder("A");
         Thread thread1 = new SynchMain(str);
         Thread thread2 = new SynchMain(str);
         Thread thread3 = new SynchMain(str);
