@@ -7,10 +7,17 @@ public class NewRunnable implements Runnable {
             if (i % 10 == 0) {
                 System.out.println(i + " " + Thread.currentThread().getName());
             }
+
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
     public static void main(String[] args) {
+
         NewRunnable newRunnable = new NewRunnable();
         Thread thread = new Thread(newRunnable, " -1-");
         Thread thread2 = new Thread(newRunnable);
