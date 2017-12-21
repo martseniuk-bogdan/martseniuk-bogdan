@@ -1,5 +1,7 @@
 package com.company.lessons18;
 
+import java.util.regex.Pattern;
+
 public class ExpMain {
     public static void main(String[] args) {
         try {
@@ -12,16 +14,22 @@ public class ExpMain {
         } catch (WrongLoginException e) {
             e.printStackTrace();
         }
-        System.out.println("liza");
+
     }
 
     public static boolean identifications(String login, String password, String confirmPassword) throws WrongPasswordException, WrongLoginException {
-        if (login.length() > 20) {
-            throw new WrongLoginException("incorrect login");
+        try {
+            if (!Pattern.compile("\\w{1,20}").matcher(login).matches()) {
+                throw new WrongLoginException("login isn`t correct");
+            }
+            if (!password.equals(confirmPassword) || !Pattern.compile("\\w{1,20}").matcher(password).matches()) {
+                throw new WrongPasswordException("password isn`t correct");
+            }
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.print(e.getMessage() + " ");
+            return false;
         }
-        if (password.length() > 20 || !password.equals(confirmPassword)) {
-            throw new WrongPasswordException("incorrect password");
-        }
+        System.out.print("Login: " + login + " Password: " + password + " ");
         return true;
     }
 }
