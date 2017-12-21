@@ -14,7 +14,7 @@ public class SynchMain extends Thread {
                 System.out.print(str + " ");
 
             }
-            System.out.println(" Thread- " + Thread.currentThread().getName());
+            System.out.println(" Thread-  " + Thread.currentThread().getName());
             char c = str.charAt(0);
             str.setCharAt(0, ++c);
         }
